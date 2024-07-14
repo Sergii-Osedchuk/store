@@ -1,0 +1,140 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form input {
+  border-radius: 5px;
+  border: none;
+  height: 2em;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.form input:focus, .form textarea:focus {
+  outline: 1px solid gray;
+}
+
+.form label {
+  padding-top: 1em;
+}
+
+.form legend {
+  text-align: center;
+  font-size: 16px;
+}
+
+.form textarea {
+  border-radius: 5px;
+  border: none;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cartItem {
+  display: flex;
+  border-bottom: 2px solid gray;
+  align-items: center;
+  justify-content: space-between;
+  height: 5em
+}
+
+.title {
+  width: 20em;
+  font-size: 12px;
+  text-align: center;
+}
+
+.picture { 
+  width: 60px;
+  height: 60px;
+  padding: 0 2em;
+}
+
+.total {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.order {
+  text-align: center;
+}
+
+.wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  margin: 1em 8em 0;
+}
+
+.orderWraper {
+  border: 1px solid #bbbbbb;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 2em;
+  box-shadow: 8px 5px 5px gray;
+}
+
+.submit {
+  text-align: center;
+  width: 10em;
+  border-radius: 5px;
+  background-color: #ed1c24;
+  color: white;
+  border: none;
+  margin: auto;
+  margin-top: 2em;
+  font-weight: 600;
+
+}
+
+.submit:hover {
+  background-color: #bbbbbb;
+  color: white;
+}
+
+.submit:active {
+  background-color: white;
+  color: #ed1c24;
+}
+
+.checkout {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.quantity {
+  padding: 0 1em;
+}
+
+.total__quantity, .total__value {
+  margin: 0.5em 0;
+}
+
+.order {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price, .value {
+  font-size: 14px;
+  font-weight: 600;
+}

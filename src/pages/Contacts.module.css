@@ -1,0 +1,47 @@
+.wraper {
+  display: flex;
+  justify-content:space-between;
+  margin-top: 40px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+.contactWraper {
+  margin-right: 300px;
+  margin-top: 50px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.logos {
+  display: flex;
+  margin-top: 20px;
+}
+
+.link {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.phone {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}

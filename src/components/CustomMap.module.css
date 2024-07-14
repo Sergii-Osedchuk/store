@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  height: 500px;
+  margin-left: 260px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.addressContainer {
+  margin-top: 40px;
+  padding-left: 30px;
+}
+
+.address {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.addressTitle {
+  display: block;
+  font-size: 14px;
+}
+
+.days, .hours {
+  font-size: 14px;
+}

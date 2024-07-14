@@ -1,0 +1,58 @@
+.wraper {
+  width: 100vh;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 8px 5px 5px gray;
+
+}
+
+.wraper img:hover {
+  scale: 1.2;
+}
+
+.titleWraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  max-width: 50%;
+}
+
+.button {
+  background-color: #ed1c24;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.7s;
+}
+
+.button:hover {
+  background-color: #bbbbbb;
+  scale:1.2;
+}
+
+.button:active{
+  background-color: white;
+  color:#ed1c24;
+}
+
+.addButton {
+  width: 100px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.category {
+  font-size: 14px;
+}

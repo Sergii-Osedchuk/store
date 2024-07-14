@@ -1,0 +1,41 @@
+header {
+  background-color: #ed1c24;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.list {
+  display: flex;
+}
+
+.list:first-child {
+  padding-left: 0px;
+}
+
+.list a{
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #fbfbfb;
+}
+
+.list a.active,
+.list a:hover {
+  color:#bbbbbb;
+}
+
+.length {
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
