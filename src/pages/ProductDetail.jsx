@@ -2,11 +2,13 @@ import { useParams, useOutletContext, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from './ProductDetail.module.css';
 import Loader from '../components/Loader';
+import Error from "../components/Error";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const [items, setItems] = useOutletContext([]);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
 
@@ -18,12 +20,16 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      const data = await fetch(`https://fakestoreapi.com/products/${productId}`);
-      const result = await data.json();
-      setLoading(false);
-
-      setProduct(result);
+      try {
+        setLoading(true);
+        const data = await fetch(`https://fakestoreapi.com/products/${productId}`);
+        const result = await data.json();
+        setLoading(false);
+        setProduct(result);
+      } catch(error) {
+        setLoading(false);
+        setErrorMessage(error.message);
+      }
     }
 
     fetchData();
@@ -46,8 +52,10 @@ const ProductDetail = () => {
   };
 
   return (
-    <>
-      {loading ? <Loader /> : <div className={styles.wraper}>
+    <> 
+      {loading && <Loader />}
+      {errorMessage && <Error message={errorMessage} /> } 
+      {Object.keys(product).length > 0 && <div className={styles.wraper}>
         <div className={styles.titleWraper}>
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.category}>Category - {product.category}</p>

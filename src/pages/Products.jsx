@@ -4,12 +4,14 @@ import Item from '../components/Item';
 import styles from './Products.module.css';
 import Filter from '../components/Filter';
 import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 const Products = ({category}) => {
   const [products, setProducts] = useState([]);
   const [items, setItems] = useOutletContext([]);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const inputHandler = (event) => {
     setInputValue(event.target.value);
@@ -42,11 +44,16 @@ const Products = ({category}) => {
 
     useEffect(() => {
       const fetchData = async() => {
-        setLoading(true);
-        const data = await fetch(url);
-        const json = await data.json();
-        setLoading(false);
-        setProducts(json);
+        try {
+          setLoading(true);
+          const data = await fetch(url);
+          const json = await data.json();
+          setLoading(false);
+          setProducts(json);
+        }
+        catch(error) {
+          setErrorMessage(error.message);
+        }
       }
 
       fetchData();
@@ -56,17 +63,21 @@ const Products = ({category}) => {
 
   return (
     <>
-      <Filter inputValue={inputValue} onChangeHandler={inputHandler}/>
-      {loading ? <Loader /> : <ul className={styles.goods}>
-        {filteredProducts.map(item => <Item 
-            key={item.id} 
-            title={item.title}
-            price={item.price}
-            image={item.image}
-            item={item}
-            onAddItem={onAddItem}
-          />)}
-      </ul>}
+      {loading && <Loader />}
+      {errorMessage && <Error message={errorMessage} />}
+      {products.length > 0 && (<>
+        <Filter inputValue={inputValue} onChangeHandler={inputHandler}/>
+          <ul className={styles.goods}>
+            {filteredProducts.map(item => <Item 
+                key={item.id} 
+                title={item.title}
+                price={item.price}
+                image={item.image}
+                item={item}
+                onAddItem={onAddItem}
+              />)}
+          </ul>
+        </>)}
     </>
   )
 }

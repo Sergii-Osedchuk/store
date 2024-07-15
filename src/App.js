@@ -3,7 +3,7 @@ import RootLayout from './components/RootLayout';
 import Contacts from './pages/Contacts';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
-import ErrorPage from './pages/ErrorPage';
+import ErrorBoundary from './pages/ErrorPage';
 import Slider from './pages/Slider';
 import SubmitPage from './pages/SubmitPage';
 import Final from './pages/Final';
@@ -14,7 +14,7 @@ function App() {
     {
       path: '/',
       element: <RootLayout />,
-      errorElement: <ErrorPage />,
+      errorElement: <ErrorBoundary />,
       children: [
         {
           path: '/',
