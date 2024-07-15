@@ -1,0 +1,10 @@
+.title {
+  margin: auto;
+  text-align: center;
+  color: #818181;
+  font-size: 18px;
+}
+
+.title p{
+  margin-top: 3em;;
+}

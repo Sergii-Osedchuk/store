@@ -3,11 +3,13 @@ import { useOutletContext } from 'react-router-dom';
 import Item from '../components/Item';
 import styles from './Products.module.css';
 import Filter from '../components/Filter';
+import Loader from '../components/Loader';
 
 const Products = ({category}) => {
   const [products, setProducts] = useState([]);
   const [items, setItems] = useOutletContext([]);
   const [inputValue, setInputValue] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const inputHandler = (event) => {
     setInputValue(event.target.value);
@@ -39,17 +41,23 @@ const Products = ({category}) => {
   }
 
     useEffect(() => {
-      fetch(url)
-        .then(res => res.json())
-        .then(result => {
-          setProducts(result)});
+      const fetchData = async() => {
+        setLoading(true);
+        const data = await fetch(url);
+        const json = await data.json();
+        setLoading(false);
+        setProducts(json);
+      }
+
+      fetchData();
+
       }, [url]);
 
 
   return (
     <>
       <Filter inputValue={inputValue} onChangeHandler={inputHandler}/>
-      <ul className={styles.goods}>
+      {loading ? <Loader /> : <ul className={styles.goods}>
         {filteredProducts.map(item => <Item 
             key={item.id} 
             title={item.title}
@@ -58,7 +66,7 @@ const Products = ({category}) => {
             item={item}
             onAddItem={onAddItem}
           />)}
-      </ul>
+      </ul>}
     </>
   )
 }

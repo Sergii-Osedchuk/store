@@ -26,7 +26,7 @@ function App() {
         },
         {
           path: '/products',
-          element: <Products/>,
+          element:<Products/>,
         },
         {
           path: '/electronics',
