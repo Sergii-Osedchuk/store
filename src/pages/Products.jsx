@@ -45,6 +45,7 @@ const Products = ({category}) => {
     useEffect(() => {
       const fetchData = async() => {
         try {
+          setProducts([]);
           setLoading(true);
           const data = await fetch(url);
           const json = await data.json();
