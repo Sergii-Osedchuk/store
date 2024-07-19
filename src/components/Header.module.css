@@ -8,9 +8,8 @@ header {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
 }
 
 .list {
@@ -38,4 +37,14 @@ nav {
   font-family:'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: 600;
+}
+
+.cart {
+  display: flex;
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+  padding-left: 5rem;
 }

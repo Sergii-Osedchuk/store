@@ -9,38 +9,42 @@ const Header = ({items, onIncrement, onDecrement, onDelete, showCart, onCartHand
     <header>
       <div>
         <nav>
-          <ul className={styles.list}>
-            <li>
-              <NavLink to='/' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Our vibe</NavLink>
-            </li>
-            <li>
-              <NavLink to='/products' className={({isActive}) => 
-              isActive ? styles.active : undefined}>All products</NavLink>
-            </li>
-            <li>
-              <NavLink to='/man' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Men`s clothing</NavLink>
-            </li>
-            <li>
-              <NavLink to='/woman' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Women`s clothing</NavLink>
-            </li>
-            <li>
-              <NavLink to='/jewellery' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Jewellery</NavLink>
-            </li>
-            <li>
-              <NavLink to='/electronics' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Electronics</NavLink>
-            </li>
-            <li>
-              <NavLink to='/contacts' className={({isActive}) => 
-              isActive ? styles.active : undefined}>Contacts</NavLink>
-            </li>
-          </ul>
-          <MdOutlineShoppingCart onClick={onCartHandler} style={{ color: "white", marginLeft: '300px', fontSize:'20px', cursor: 'pointer'}} />
-          <div onClick = {onCartHandler} className={styles.length}>{items.length}</div>
+          <div>
+            <ul className={styles.list}>
+              <li>
+                <NavLink to='/' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Our vibe</NavLink>
+              </li>
+              <li>
+                <NavLink to='/products' className={({isActive}) => 
+                isActive ? styles.active : undefined}>All products</NavLink>
+              </li>
+              <li>
+                <NavLink to='/man' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Men`s clothing</NavLink>
+              </li>
+              <li>
+                <NavLink to='/woman' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Women`s clothing</NavLink>
+              </li>
+              <li>
+                <NavLink to='/jewellery' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Jewellery</NavLink>
+              </li>
+              <li>
+                <NavLink to='/electronics' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Electronics</NavLink>
+              </li>
+              <li>
+                <NavLink to='/contacts' className={({isActive}) => 
+                isActive ? styles.active : undefined}>Contacts</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.cart}>
+            <MdOutlineShoppingCart onClick={onCartHandler} className={styles.icon} />
+            <div onClick = {onCartHandler} className={styles.length}>{items.length}</div>
+          </div>
         </nav>
         {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete} onCartHandler={onCartHandler}/>}
       </div>

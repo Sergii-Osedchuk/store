@@ -1,8 +1,8 @@
 import styles from './SubmitPage.module.css';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 
-
 const SubmitPage = () => {
+
   const [items, setItems] = useOutletContext();
 
   const navigate = useNavigate();
@@ -26,6 +26,8 @@ const SubmitPage = () => {
     navigate('/final');
     setItems([]);
   }
+
+  
 
   return (
     <div>
