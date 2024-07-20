@@ -1,15 +1,17 @@
-header {
-  background-color: #ed1c24;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header {
+  margin-bottom: 5rem;
+  /* width: 100%; */
 }
 
-nav {
+.nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
+  background-color: #ed1c24;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .list {
@@ -22,7 +24,7 @@ nav {
 
 .list a{
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 1rem;
   font-size: 14px;
   color: #fbfbfb;
 }
@@ -39,12 +41,85 @@ nav {
   font-weight: 600;
 }
 
+.icon {
+  color: white;
+  cursor: pointer;
+}
+
 .cart {
   display: flex;
 }
 
-.icon {
-  color: white;
-  cursor: pointer;
-  padding-left: 5rem;
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media only screen and (max-width: 780px) {
+  .nav {
+    justify-content: space-around;
+  }
+
+  .nav.active {
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 100000;
+  }
+  .list {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .list.active {
+    display: flex;
+    left: 0;
+    position: fixed;
+    width: 26rem;
+    height: 100%;
+  }
+
+  .list li {
+    margin: 2rem 7rem;
+  }
+
+  .list li a{
+    color: #ed1c24;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
 }

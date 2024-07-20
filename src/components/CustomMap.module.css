@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  margin-top: 2rem;
   height: 500px;
   margin-left: 260px;
   justify-content: center;
@@ -7,7 +8,7 @@
 }
 
 .addressContainer {
-  margin-top: 40px;
+  margin-top: 2rem;
   padding-left: 30px;
 }
 
