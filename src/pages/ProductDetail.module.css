@@ -1,14 +1,11 @@
 .wraper {
-  width: 100vh;
-  margin: auto;
-  margin-top: 7rem;
-  margin-bottom: 50px;
+  width: 60vw;
+  margin: 6rem auto;
   border: 1px solid #bbbbbb;
   border-radius: 5px;
   padding: 30px;
   background-color: white;
   box-shadow: 8px 5px 5px gray;
-
 }
 
 .wraper img:hover {

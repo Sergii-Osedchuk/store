@@ -7,7 +7,6 @@
   margin-right: auto;
   user-select: none;
   padding: 0;
-  /* top: 40px; */
 }
 
 .moto {
@@ -18,4 +17,12 @@
   font-size: 22px;
   font-weight: 600;
   color: white;
+}
+
+@media only screen and (max-width: 780px) {
+  .moto {
+    top: 15px;
+    right: 50px;
+    font-size: 14px;
+  }
 }

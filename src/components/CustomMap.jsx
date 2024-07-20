@@ -14,7 +14,7 @@ const CustomMap = () => {
   return (
     <div className={styles.container}>
       <MapContainer center={[50.450001, 30.51071]} zoom={13} scrollWheelZoom={false} 
-           style={{height: '120vh', width: '40vw'}}
+           style={{height: '120vh', width: '40vw'} }
         >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
