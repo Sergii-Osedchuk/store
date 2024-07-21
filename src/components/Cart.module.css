@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background: black;
 }
 
@@ -34,9 +34,7 @@
   height: 7rem;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px 10px; */
   padding: 10px;
-  /* margin-right: 2rem; */
 }
 
 .title {
@@ -207,6 +205,4 @@ button {
   .title {
     margin-right: 5px;
   }
-
-
 }

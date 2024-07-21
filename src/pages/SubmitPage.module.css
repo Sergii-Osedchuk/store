@@ -3,6 +3,9 @@
   flex-direction: column;
   font-size: 14px;
   font-weight: 600;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
 }
 
 .form input {
@@ -143,5 +146,28 @@
   .wraper {
     display: flex;
     flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .orderWraper {
+    margin: 0 1rem;
+    width: 86vw;
+  }
+
+  .cartItem {
+    width: 100%;
+  }
+
+  .form {
+    padding-left: 2rem;
+  }
+
+  .title, .price, .totalValue {
+    font-size: 12px;
+  }
+
+  .picture {
+    padding: 1rem;
   }
 }

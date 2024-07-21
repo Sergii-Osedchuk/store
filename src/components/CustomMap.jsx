@@ -1,4 +1,3 @@
-
 import styles from './CustomMap.module.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";

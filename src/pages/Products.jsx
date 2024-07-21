@@ -58,7 +58,6 @@ const Products = ({category}) => {
       }
 
       fetchData();
-
       }, [url]);
 
 

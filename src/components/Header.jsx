@@ -54,7 +54,15 @@ const Header = ({items, onIncrement, onDecrement, onDelete, showCart, onCartHand
           <div onClick = {onCartHandler} className={styles.length}>{items.length}</div>
         </div>
       </nav>
-      {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete} onCartHandler={onCartHandler}/>}
+      {showCart && items.length > 0 && 
+        <Cart 
+          items={items} 
+          onIncrement={onIncrement} 
+          onDecrement={onDecrement} 
+          onDelete={onDelete} 
+          onCartHandler={onCartHandler}
+        />
+      }
     </header>
   )
 }

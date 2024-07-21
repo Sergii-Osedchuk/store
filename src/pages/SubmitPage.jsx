@@ -27,8 +27,6 @@ const SubmitPage = () => {
     setItems([]);
   }
 
-  
-
   return (
     <div>
       <div>

@@ -8,3 +8,9 @@
   padding: 4rem;
   margin: auto;
 }
+
+@media only screen and (max-width: 780px) {
+  .goods {
+    padding: 1rem;
+  }
+}
