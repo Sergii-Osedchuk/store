@@ -9,6 +9,9 @@ const ProductDetail = () => {
   const [items, setItems] = useOutletContext([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [addedItem, setAddedItem] = useState(false);
+  let buttonName = 'Add to cart';
+  let bgc = '#ed1c24';
 
   const navigate = useNavigate();
 
@@ -35,6 +38,7 @@ const ProductDetail = () => {
     fetchData();
   }, [productId]);
 
+
   const onAddItem = () => {
     const newItems = [];
 
@@ -48,8 +52,14 @@ const ProductDetail = () => {
     if (items.filter(item => item.id !== product.id).length === items.length){
       newItems.push({...product, quantity: 1})
     }
-    setItems(newItems)
+    setAddedItem(true);
+    setItems(newItems);
   };
+
+  if (addedItem) {
+    bgc = 'violet';
+    buttonName = 'In the cart';
+  }
 
   return (
     <> 
@@ -64,7 +74,7 @@ const ProductDetail = () => {
         <img src={product.image} alt={product.title} />
         <p>{product.description}</p>
         <p className={styles.price}>Price {product.price}$</p>
-        <button onClick={onAddItem} className={`${styles.button} ${styles.addButton}`}>Add to Cart</button>
+        <button onClick={onAddItem} className={`${styles.button} ${styles.addButton}`} style={{backgroundColor: bgc}}>{buttonName}</button>
       </div>}
     </>
   );
