@@ -26,11 +26,11 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  padding-left: 2rem;
 }
 
 .cartItem {
   display: flex;
-  /* width: 90%; */
   border-bottom: 2px solid gray;
   height: 7rem;
   align-items: center;
@@ -40,7 +40,6 @@
 }
 
 .title {
-  /* width: 200px; */
   font-size: 12px;
   text-align: center;
 }
@@ -84,6 +83,7 @@ button {
   font-size: 13px;
   font-weight: 600;
   text-align: left;
+  padding-left: 10px;
 }
 
 .total {
@@ -124,8 +124,9 @@ button {
 }
 
 .delete {
-  width: 60px;
+  display: block;
   font-weight: 600;
+  width: 30px;
   font-size: 12px;
   border: none;
   border-radius: 5px;
@@ -219,5 +220,9 @@ button {
 
   .cart {
     align-items:flex-start;
+  }
+
+  .delete {
+    width: 30px;
   }
 }

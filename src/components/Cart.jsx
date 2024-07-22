@@ -44,7 +44,7 @@ const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
                   <p className={styles.quantity}>{item.quantity}</p>
                   <button onClick={() => onIncrement(item.id)} className={styles.buttons}>+</button>
                   <p className={styles.value}>Total value {(item.price*item.quantity).toFixed(2)}$</p>
-                  <button onClick={() => onDelete(item.id)} className={styles.delete}>Delete</button>
+                  <button onClick={() => onDelete(item.id)} className={styles.delete}>X</button>
                 </div>
               </li>
             ))}
