@@ -146,17 +146,14 @@
   .wraper {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    align-items: normal;
+    margin-left: 5px;
     margin-bottom: 1rem;
   }
 
   .orderWraper {
     margin: auto;
-    width: 86vw;
-  }
-
-  .cartItem {
-    width: 100%;
+    /* width: 86vw; */
   }
 
   .form {
@@ -165,9 +162,11 @@
 
   .title, .price, .totalValue {
     font-size: 12px;
+    padding-left: 5px;
   }
 
   .picture {
+    display: block;
     padding: 1rem;
   }
 }
