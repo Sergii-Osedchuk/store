@@ -29,7 +29,6 @@ const SubmitPage = () => {
 
   return (
     <div>
-      <div>
         <p className={styles.checkout}>Checkout information</p>
           <div className={styles.wraper}>
             <form action='' method='post' onSubmit={submitHandler}>
@@ -73,7 +72,6 @@ const SubmitPage = () => {
               </div>
             </div>
       </div>
-    </div>
   )
 }
 
