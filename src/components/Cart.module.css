@@ -23,22 +23,24 @@
 .cart {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
 .cartItem {
   display: flex;
-  width: 90%;
+  /* width: 90%; */
   border-bottom: 2px solid gray;
   height: 7rem;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  margin-left:0px;
 }
 
 .title {
-  width: 200px;
+  /* width: 200px; */
   font-size: 12px;
   text-align: center;
 }
@@ -58,7 +60,7 @@
 .buttonWraper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-left: 10px;
 }
 
@@ -196,6 +198,9 @@ button {
 
   .cartItem {
     font-size: 12px;
+    width: 90%;
+    height: 10rem;
+    margin-left: 5px;
   }
 
   .total {
@@ -203,6 +208,16 @@ button {
   }
 
   .title {
+    font-size: 12px;
     margin-right: 5px;
+  }
+
+  .price {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .cart {
+    align-items:flex-start;
   }
 }
