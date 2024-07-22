@@ -21,6 +21,7 @@ const Slider = () => {
     <section className={styles.wraper}>
       <Swiper
         modules={[ EffectCreative, A11y, Autoplay]} 
+        speed={1500}
         effect={'creative'}
         grabCursor={true}
         creativeEffect={{
