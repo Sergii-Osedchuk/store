@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { useState } from 'react';
 import Header from './Header';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RootLayout = () => {
   const [items, setItems] = useState([]);
@@ -44,6 +46,7 @@ const RootLayout = () => {
 
   return (
     <>
+      <ToastContainer />
       <Header 
         items={items} 
         onIncrement={onIncrement} 

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from './ProductDetail.module.css';
 import Loader from '../components/Loader';
 import Error from "../components/Error";
+import { toast, Zoom } from 'react-toastify';
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({});
@@ -54,6 +55,10 @@ const ProductDetail = () => {
     }
     setAddedItem(true);
     setItems(newItems);
+    toast.success("You successfully add product to the Cart", {
+      autoClose: 1000,
+      transition: Zoom,
+    });
   };
 
   if (addedItem) {

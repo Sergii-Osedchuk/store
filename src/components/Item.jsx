@@ -1,6 +1,7 @@
 import styles from '../components/Item.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { toast, Zoom } from 'react-toastify';
 
 
 const Item = ({title, price, image, onAddItem, item}) => {
@@ -12,6 +13,7 @@ const Item = ({title, price, image, onAddItem, item}) => {
   const addItemHandler = () => {
     onAddItem(item);
     setAddedItem(true);
+    toast.success('You successfully add product to the Cart', {autoClose: 1000, transition: Zoom});
   }
 
   if (addedItem) {
